@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    srand(static_cast<unsigned int>(time(0)));
+    int secret = rand() % 101; 
+    int guess;
+
+    while (true) {
+        cout << "Введи число: ";
+        cin >> guess;
+        if (guess == secret) {
+            cout << "Победа! Ты угадал число.\n";
+            break;
+        }
+    }
+
+    return 0;
+}
